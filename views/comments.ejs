@@ -1,0 +1,27 @@
+
+<%- include('partials/header') %>
+
+    <div>
+    <h1>Comments</h1>
+    <ul>
+        <% comments.forEach(function(comment) { %>
+            <li>
+              <h3><%= comment.content %></h3>
+              
+            </li>
+          <% }); %>
+    </ul>
+</div>
+<div>
+    <form class='form' action="/comments" method="POST">
+        <input class="input" type="text" placeholder="Comment" name="content" autocomplete="off" />
+        <input type="hidden" name="blogId" value="<%= blogId %>">
+        <button type="submit" class="btn btn-dark btn-lg enter">Enter</button>
+      </form>
+</div>
+<div>
+<a class="btn btn-light btn-lg logout" href="/allblogs" ><button> Back </button> </a>
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,20 @@
+
+<%- include('partials/header') %>
+    <div>
+    <h1>Blogs</h1>
+    <ul>
+      <% blogs.forEach(function(blog) { %>
+        <li><span>Title : <%= blog.title %></span> <br>
+        <span>Content : <%= blog.content %> (<a class="btn btn-light btn-lg logout" href="/comments/<%= blog._id %>" role="button">Add Comment</a>)</span></li>
+        <hr>
+      <% }); %>
+    
+    </ul>
+</div>
+
+<a class="btn btn-light btn-lg logout" href="/logout" ><button>  Log Out  </button></a>
+<br>
+<a class="btn btn-light btn-lg logout" href="/blog" ><button> My Blogs </button></a>
+
+  </body>
+</html>

@@ -1,0 +1,18 @@
+
+
+<%- include('partials/header') %>
+    <div>
+    <h1>Comments</h1>
+    <ul>
+      <% comments.forEach(function(blog) { %>
+       
+        <li><%= blog.content %> </li>
+      <% }); %>
+    </ul>
+</div>
+<div class="buttons">
+<a class="btn btn-light btn-lg logout" href="/logout" ><button> Log Out  </button> </a> <br>
+<a class="btn btn-light btn-lg logout" href="/blog" ><button> Back  </button></a>
+</div>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Friends</title>
+  </head>
+  <body>
+    <h1>My Friends</h1>
+    <ul>
+      <% friends.forEach(function(friend) { %>
+        <li><%= friend.name %></li>
+      <% }); %>
+    </ul>
+    <% if (levelNo < 4) { %>
+      <a href="/blogs/<%= userId %>/level/<%= parseInt(levelNo) + 1 %>">Go to Level <%= parseInt(levelNo) + 1 %></a>
+    <% } %>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+    <div>
+    <h1>My Blogs</h1>
+    <ul>
+      <% blogs.forEach(function(blog) { %>
+        <li><span>Title : <%= blog.title %></span> <br>
+       <span>Content : <%= blog.content %> (<a class="btn btn-light btn-lg logout" href="/blogComments/<%= blog._id %>" role="button">Comments</a>)</span></li>
+       <hr>
+      <% }); %>
+    </ul>
+</div>
+<div>
+    <form class='form' action="/blog" method="POST">
+        <input class="input" type="text" placeholder="Title" name="title" autocomplete="off" />
+        <input class="input" type="text" placeholder="Content" name="content" autocomplete="off" />
+        <button class="btn btn-dark btn-lg enter">Post</button>
+      </form>
+</div>
+<a class="btn btn-light btn-lg logout" href="/logout" ><button>Log Out</button></a><br>
+<a class="btn btn-light btn-lg logout" href="/allblogs" ><button>Blogs Page</button> </a>
+<br>
+
+  </body>
+</html>
