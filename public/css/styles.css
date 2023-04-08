@@ -7,11 +7,9 @@ a{
     font-family:'Courier New', Courier, monospace;
    
 }
-/* .buttons{
+
+input{
     display: flex;
     flex-direction: row;
-    
+    margin: 1rem 0;
 }
-.buttons a{
-margin: 2rem 0;
-} */

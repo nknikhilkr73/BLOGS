@@ -196,30 +196,7 @@ app.get('/blogComments/:blogid', async (req, res) => {
 
 
   //  Implement the route to get n-th level friends of a given user
-app.get('/blog/:userId/level/:levelNo', async (req, res) => {
-    try {
-      const { userId, levelNo } = req.params;
-      const friends = await User.find({ _id: userId }).populate({ path: 'friends', populate: { path: 'friends', populate: { path: 'friends', populate: { path: 'friends' } } } });
-      let nthLevelFriends = [];
-  
-      function getFriends(user, level) {
-        if (level > 0) {
-          user.friends.forEach(friend => {
-            if (!nthLevelFriends.includes(friend)) {
-              nthLevelFriends.push(friend);
-              getFriends(friend, level - 1);
-            }
-          });
-        }
-      }
-  
-      getFriends(friends[0], levelNo);
-      res.status(200).send(nthLevelFriends);
-    } catch (err) {
-      console.error(err);
-      res.status(500).send('Server Error');
-    }
-  });
+//
 
 //Register the user
   app.post("/register", function (req, res) {
