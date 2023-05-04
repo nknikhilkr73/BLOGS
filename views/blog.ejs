@@ -1,24 +1,28 @@
 <%- include('partials/header') %>
-    <div>
-    <h1>My Blogs</h1>
-    <ul>
+
+<div class="allblogHeading"><h1>My Blogs</h1></div>
+    <div class="allBlogs">
+    
+    <ul style="padding-left: 3rem;">
       <% blogs.forEach(function(blog) { %>
-        <li><span>Title : <%= blog.title %></span> <br>
-       <span>Content : <%= blog.content %> (<a class="btn btn-light btn-lg logout" href="/blogComments/<%= blog._id %>" role="button">Comments</a>)</span></li>
+        <li><span><u>Title</u> :👉 <%= blog.title %></span> <br>
+       <span><u>Content</u> :👉 <%= blog.content %><br> <a class="btn btn-light btn-lg logout" href="/blogComments/<%= blog._id %>" role="button"><button> Comments </button> </a></span></li>
        <hr>
       <% }); %>
     </ul>
 </div>
-<div>
+<div class="formm">
     <form class='form' action="/blog" method="POST">
         <input class="input" type="text" placeholder="Title" name="title" autocomplete="off" />
         <input class="input" type="text" placeholder="Content" name="content" autocomplete="off" />
-        <button class="btn btn-dark btn-lg enter">Post</button>
+        <button class="btn btn-dark btn-lg enter" style="margin-bottom: 2rem;">Post</button>
       </form>
 </div>
+<div class="button">
 <a class="btn btn-light btn-lg logout" href="/logout" ><button>Log Out</button></a><br>
 <a class="btn btn-light btn-lg logout" href="/allblogs" ><button>Blogs Page</button> </a>
 <br>
+</div>
 
   </body>
 </html>

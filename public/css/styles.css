@@ -1,6 +1,17 @@
 *{
     box-sizing: border-box;
 }
+html, body{
+    min-height: 100vh;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+ 
+}
 
 a{
     text-decoration: none;
@@ -12,4 +23,102 @@ input{
     display: flex;
     flex-direction: row;
     margin: 1rem 0;
+}
+
+.button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    
+}
+.button a{
+margin-left: 2rem;
+margin-right: 2rem;
+
+}
+.button button{
+height: 4rem;
+width: 300px;
+font-size: 2.5rem;
+}
+.container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.container h1{
+    font-size: 7rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.mt-5{
+    width: 100%;
+}
+.row{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+}
+
+ label {
+    font-size: 2.5rem;
+}
+.form-control{
+    max-width: 500px;
+    height: 5rem;
+    border: 1px solid black;
+    font-size: 3rem;
+}
+form button{
+    height: 4rem;
+width: 500px;
+font-size: 2.5rem;
+margin-top: 2rem;
+}
+.allBlogs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-height: 900px;
+    overflow-y: auto;
+    margin-bottom: 2rem;
+}
+
+.allBlogs li{
+    font-size: 2.5rem;
+}
+.allblogHeading{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 4rem;
+}
+ul button{
+    height: 4rem;
+    width: 200px;
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.formm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.formm input{
+width: 700px;
+height: 5rem;
+font-size: 3rem;
+border-color: black;
+}
+u{
+    color: rgb(255, 115, 0);
+}
+ul li{
+    word-wrap: break-word;
+    white-space: normal;
 }

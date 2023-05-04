@@ -1,20 +1,22 @@
 
 <%- include('partials/header') %>
-    <div>
-    <h1>Blogs</h1>
-    <ul>
+<div class="allblogHeading"><h1>Blogs</h1></div>
+    <div class="allBlogs">
+    
+    <ul style="padding-left: 3rem;">
       <% blogs.forEach(function(blog) { %>
-        <li><span>Title : <%= blog.title %></span> <br>
-        <span>Content : <%= blog.content %> (<a class="btn btn-light btn-lg logout" href="/comments/<%= blog._id %>" role="button">Add Comment</a>)</span></li>
+        <li><span><u>Title </u> :👉 <%= blog.title %></span> <br>
+        <span><u>Content</u> :👉 <%= blog.content %> <br><a class="btn btn-light btn-lg logout" href="/comments/<%= blog._id %>" role="button"><button> Comment </button></a></span></li>
         <hr>
       <% }); %>
     
     </ul>
 </div>
 
+<div class="button">
 <a  href="/logout" ><button>  Log Out  </button></a>
 <br>
 <a  href="/blog" ><button> My Blogs </button></a>
-
+</div>
   </body>
 </html>
